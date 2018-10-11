@@ -1,12 +1,14 @@
 <script>
 import Index from "./components/Index.vue";
 import Bills from "./components/Bills.vue";
+import Address from "./components/Address";
 
 export default {
   name: "app",
   components: {
     Index, 
     Bills,
+    Address,
   }
 };
 </script>
@@ -16,7 +18,8 @@ export default {
 <template>
   <div id="app">
     <Index title="LS Star"/> 
-    <Bills/> 
+    
+    <Address/> 
   </div>
 </template>
 
