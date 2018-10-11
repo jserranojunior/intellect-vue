@@ -1,28 +1,25 @@
+<script>
+import Index from "./components/Index.vue";
+import Bills from "./components/Bills.vue";
+
+export default {
+  name: "app",
+  components: {
+    Index, 
+    Bills,
+  }
+};
+</script>
+
+
+
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Index title="LS Star"/> 
+    <Bills/> 
   </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
 
-export default {
-  name: 'app',
-  components: {
-    HelloWorld
-  }
-}
-</script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+
