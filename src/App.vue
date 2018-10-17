@@ -1,15 +1,21 @@
 <script>
 import Index from "./components/Index.vue";
 import Bills from "./components/Bills.vue";
-import Address from "./components/Address";
+
 
 export default {
   name: "app",
+  
   components: {
     Index, 
     Bills,
-    Address,
+  },
+  data: function(){
+    return{     
+    app: "texto vindo do app"  
+    }
   }
+  
 };
 </script>
 
@@ -17,9 +23,7 @@ export default {
 
 <template>
   <div id="app">
-    <Index title="LS Star"/> 
-    
-    <Address/> 
+    <Bills />   
   </div>
 </template>
 

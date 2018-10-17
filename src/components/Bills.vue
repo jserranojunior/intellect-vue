@@ -1,39 +1,45 @@
+<template>
+<div>
+
+<div class="row">
+    <div class="col-12"><h2 class="text-center">FINANCEIRO</h2></div>
+</div>
+   <div class="row mx-auto">
+       <div class=" text-center col-4 offset-4">
+     
+<div class="card card-sm">
+    <div class="card-header">
+        DATA
+    </div>
+    <div class="card-body">
+                <date :data="data" />
+    </div>
+</div>
+
+       </div>
+   </div>
+
+</div>
+</template>
+
 <script>
-    export default {
-        name: "Bills",
-        data () {
-            return{
-                title: "Todas as datas",
-                data:{
-                    meses:{
-                        0: "Janeiro", 
-                        1: "Fevereiro", 
-                    }
-                }
-            }
-        }
+import date from "./date.vue";
+
+export default {
+  name: "Bills",
+  components: {
+    date
+  },
+  data() {
+    return {
+      data: {
+        date: "17/10/2018",
+        dateNextMonth: "17/11/2018",
+        datePreviousMonth: "17/09/2018"
+      }
     };
+  }
+};
 </script>
 
-
-<template>
-    <div class="row">
-        <div class="col-3 mx-auto">
-            <div class="card">
-                <div class="card-header">
-                    <div class="card-title">{{title}}</div>
-                </div>
-                <div class="card-body">
-                    <button type="button" class="btn text-capitalize btn-sm btn-secondary dropdown-toggle" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        {{data.meses}}
-                    </button>
-                    <div class="dropdown-menu">
-                       <a v-for="data in items" class="dropdown-item">{{items.data}}</a>                        
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</template>
 

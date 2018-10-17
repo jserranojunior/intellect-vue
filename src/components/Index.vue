@@ -1,13 +1,20 @@
 <template>
-    <h3 class="text-center">{{title}}</h3>    
+<div>
+
+
+
+</div>    
 </template>
 
 <script>
 export default {
-  name: 'Index',
+  name: 'Index', 
   props: {
-    msg: String,
-    title: String
-  }
+  },
+  data: function(){
+    return{    
+    } 
+  },
+ 
 }
 </script>
